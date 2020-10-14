@@ -10,6 +10,11 @@ function createDate() {
     return newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 }
 
+function resetForm() {
+    document.getElementById('zip').value = '';
+    document.getElementById('feelings').value = '';
+}
+
 function updateUI(data) {
     // Updating Virtual DOM
     const DOC_FRAGMENT = document.createDocumentFragment();
@@ -31,6 +36,8 @@ function updateUI(data) {
     entry.append(content);
     DOC_FRAGMENT.append(entry);
     document.querySelector('.holder.entry').replaceChild(DOC_FRAGMENT, document.querySelector('#entryHolder'));
+
+    resetForm();
 }
 
 /* Function to POST data */
