@@ -40,7 +40,6 @@ const getData = (req, res) => {
 const postData = (req, res) => {
     // get object sent from client side
     let data = req.body;
-    console.log(data);
     // update DB
     projectData.push(data);
     res.send(projectData);

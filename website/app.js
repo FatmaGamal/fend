@@ -35,7 +35,6 @@ function updateUI(data) {
 
 /* Function to POST data */
 const postData = async (url, data) => {
-    console.log('data to post', data);
     const result = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
